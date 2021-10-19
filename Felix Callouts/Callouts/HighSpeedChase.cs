@@ -23,7 +23,7 @@ namespace FelixsCallouts.Callouts
         {
             Spawnpoint = World.GetRandomPositionOnStreet();
             ShowCalloutAreaBlipBeforeAccepting(Spawnpoint, 30f);
-            AddMaximumDistanceCheck(30f, Spawnpoint);
+            AddMinimumDistanceCheck(30f, Spawnpoint);
             CalloutMessage = "High Speed Chase In Progress";
             CalloutPosition = Spawnpoint;
             Functions.PlayScannerAudioUsingPosition("WE_HAVE CRIME_RESISTING_ARREST_02 IN_OR_ON_POSITION", Spawnpoint);
@@ -76,7 +76,7 @@ namespace FelixsCallouts.Callouts
 
             if (Suspect.Exists())
             {
-                Suspect.Dismiss();
+                //Suspect.Dismiss();
             }
             if (Suspect.Exists())
             {

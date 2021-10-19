@@ -27,7 +27,7 @@ namespace FelixsCallouts.Callouts
             Spawnpoint = new Vector3(2760.251f, 3472.108f, 55.22629f);
             heading = 66.64632f;
             ShowCalloutAreaBlipBeforeAccepting(Spawnpoint, 30f);
-            AddMaximumDistanceCheck(30f, Spawnpoint);
+            AddMinimumDistanceCheck(30f, Spawnpoint);
             CalloutMessage = ("Intoxicated Person seen in public");
             CalloutPosition = Spawnpoint;
             Functions.PlayScannerAudioUsingPosition("WE_HAVE CRIME_DISTURBING_THE_PEACE_01 IN_OR_ON_POSITION", Spawnpoint);
@@ -38,7 +38,7 @@ namespace FelixsCallouts.Callouts
 
         public override bool OnCalloutAccepted()
         {
-            Suspect = new Ped("a_m_y_acult_02", Spawnpoint, heading);
+            Suspect = new Ped("ig_money", Spawnpoint, heading);
             Suspect.IsPersistent = true;
             Suspect.BlockPermanentEvents = true;
 
@@ -99,6 +99,7 @@ namespace FelixsCallouts.Callouts
                         Game.DisplayHelp("Conversation Over");
                     }
                 }
+                Game.LogTrivial("End of Conversation");
             }
 
             if (Suspect.IsCuffed || Suspect.IsDead || Game.LocalPlayer.Character.IsDead || !Suspect.Exists())

@@ -20,10 +20,10 @@ namespace FelixsCallouts.Callouts
         {
             Spawnpoint = World.GetRandomPositionOnStreet();
             ShowCalloutAreaBlipBeforeAccepting(Spawnpoint, 30f);
-            AddMaximumDistanceCheck(30f, Spawnpoint);
+            AddMinimumDistanceCheck(30f, Spawnpoint);
             CalloutMessage = "GunShots reported";
             CalloutPosition = Spawnpoint;
-            Functions.PlayScannerAudioUsingPosition("ATTENTION_ALL_UNITS_01 WE_HAVE CRIME_GUNFIRE_02 UNITS_RESPOND_CODE_03_01 IN_OR_ON_POSITION", Spawnpoint);
+            Functions.PlayScannerAudioUsingPosition("ATTENTION_ALL_UNITS_01 WE_HAVE CRIME_GUNFIRE_02 IN_OR_ON_POSITION UNITS_RESPOND_CODE_03_01", Spawnpoint);
 
 
             return base.OnBeforeCalloutDisplayed();
@@ -31,7 +31,7 @@ namespace FelixsCallouts.Callouts
 
         public override bool OnCalloutAccepted()
         {
-            Suspect = new Ped();
+            Suspect = new Ped(Spawnpoint);
             Suspect.IsPersistent = true;
             Suspect.BlockPermanentEvents = true;
             Suspect.Inventory.GiveNewWeapon("WEAPON_PISTOL", 50, true);
