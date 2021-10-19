@@ -46,6 +46,7 @@ namespace FelixsCallouts.Callouts
             SuspectBlip.Color = System.Drawing.Color.Blue;
             SuspectBlip.IsRouteEnabled = true;
 
+            Suspect.Tasks.Wander();
 
             if (Suspect.IsMale)
                 maleFemale = "sir";
@@ -71,7 +72,7 @@ namespace FelixsCallouts.Callouts
 
                     if (counter == 1)
                     {
-                        Game.DisplaySubtitle("Officer: Excuse me" + maleFemale + ",  do you need any assistance ?");
+                        Game.DisplaySubtitle("Officer: Excuse me " + maleFemale + ",  do you need any assistance ?");
                     }
                     if (counter == 2)
                     {
@@ -96,7 +97,7 @@ namespace FelixsCallouts.Callouts
                     }
                     if (counter >= 6)
                     {
-                        Game.DisplayHelp("Conversation Over");
+                        Game.DisplaySubtitle("Conversation Over");
                     }
                 }
                 Game.LogTrivial("End of Conversation");

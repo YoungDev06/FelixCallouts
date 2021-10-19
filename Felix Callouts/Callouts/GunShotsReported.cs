@@ -23,7 +23,7 @@ namespace FelixsCallouts.Callouts
             Spawnpoint = World.GetNextPositionOnStreet(Game.LocalPlayer.Character.Position.Around(1000f));
             ShowCalloutAreaBlipBeforeAccepting(Spawnpoint, 30f);
             AddMinimumDistanceCheck(30f, Spawnpoint);
-            CalloutMessage = "GunShots reported";
+            CalloutMessage = "Gunshots reported";
             CalloutPosition = Spawnpoint;
             Functions.PlayScannerAudioUsingPosition("ATTENTION_ALL_UNITS_01 WE_HAVE CRIME_GUNFIRE_02 IN_OR_ON_POSITION UNITS_RESPOND_CODE_03_01", Spawnpoint);
 
