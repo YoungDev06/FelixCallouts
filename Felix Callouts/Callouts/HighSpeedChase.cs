@@ -21,7 +21,7 @@ namespace FelixsCallouts.Callouts
 
         public override bool OnBeforeCalloutDisplayed()
         {
-            Spawnpoint = World.GetRandomPositionOnStreet();
+            Spawnpoint = World.GetNextPositionOnStreet(Game.LocalPlayer.Character.Position.Around(1000f));
             ShowCalloutAreaBlipBeforeAccepting(Spawnpoint, 30f);
             AddMinimumDistanceCheck(30f, Spawnpoint);
             CalloutMessage = "High Speed Chase In Progress";
