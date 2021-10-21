@@ -34,6 +34,12 @@
     <Reference Include="LSPD First Response">
       <HintPath>..\..\..\..\Callout Test\References\LSPD First Response.dll</HintPath>
     </Reference>
+    <Reference Include="LSPD First Response, Version=0.4.7874.38392, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\References\LSPD First Response.dll</HintPath>
+    </Reference>
+    <Reference Include="RagePluginHook, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\References\RagePluginHookSDK.dll</HintPath>
+    </Reference>
     <Reference Include="RagePluginHookSDK">
       <HintPath>..\..\..\..\Callout Test\References\RagePluginHookSDK.dll</HintPath>
     </Reference>
@@ -52,6 +58,7 @@
     <Compile Include="Callouts\GunShotsReported.cs" />
     <Compile Include="Callouts\HighSpeedChase.cs" />
     <Compile Include="Callouts\IntoxicatedIndividual.cs" />
+    <Compile Include="Callouts\PanicButton.cs" />
     <Compile Include="IniFile.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

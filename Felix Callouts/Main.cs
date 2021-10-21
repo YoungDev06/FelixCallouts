@@ -38,6 +38,7 @@ namespace FelixsCallouts
             Functions.RegisterCallout(typeof(Callouts.HighSpeedChase));
             Functions.RegisterCallout(typeof(Callouts.IntoxicatedIndividual));
             Functions.RegisterCallout(typeof(Callouts.GunShotsReported));
+            Functions.RegisterCallout(typeof(Callouts.PanicButton));
 
         }
 
