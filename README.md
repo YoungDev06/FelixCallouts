@@ -4,7 +4,7 @@ LSPDFR Callouts Pack
 
 # READ ME
 
-This LSPDFR project is now open to the public to edit
+This LSPDFR project is now open to the public to edit, DO NOT reupload, Fork / pull request only please  :)
 
 # Instruction
 
